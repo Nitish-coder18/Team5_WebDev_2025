@@ -42,7 +42,7 @@
     transform: translateX(100px);
 }
 [data-aos="right-in-animation"].aos-animate{
-  animation-name: left-in;
+  animation-name: right-in;
   animation-duration: 1.5s;
   animation-delay: 0s;
   animation-timing-function: ease-in;
@@ -77,3 +77,26 @@
   display: inline-block;
 }
 
+@keyframes slide-up {
+  0%{
+    opacity:0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+
+[data-aos="slide-up-animation"] {
+  opacity:0;
+    transform: translateY(100px);
+}
+[data-aos="slide-up-animation"].aos-animate{
+  animation-name: slide-up;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  
+}
