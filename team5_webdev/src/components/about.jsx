@@ -20,8 +20,8 @@ const About = () => {
       </center>
 
     <center className="text-2xl">
-      <div className="w-250 flex flex-col gap-10 ">
-        <p className='text-orange-500 ' data-aos="slide-up-animation"> Independence Day is celebrated every year on 15th August. On this day in 1947, India gained freedom from British rule. It is a symbol of patriotism and pride.</p>
+      <div className="w-250 flex flex-col gap-10">
+        <p className='text-orange-500'> Independence Day is celebrated every year on 15th August. On this day in 1947, India gained freedom from British rule. It is a symbol of patriotism and pride.</p>
 
         <p data-aos="slide-up-animation"> On this day, the national flag is hoisted across the country. Schools, colleges, and government offices hold special programs. People sing patriotic songs and deliver speeches.</p>
 
