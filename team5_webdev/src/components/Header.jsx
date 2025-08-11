@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
     <Navbaar />
-    <div id="home" className="flex flex-row items-center justify-center gap-60 mt-35">
+    <div id="home" className="flex flex-row items-center justify-center gap-60 mt-35 mb-40">
       <div className="">
             <h1 className="text-5xl font-bold mb-4 text-orange-500 slide-up-animation"> Digital Freedom Gallery</h1>
             <p className="text-3xl mb-14 items-start mt-3 slide-up-animation">Code a Vision. Design the Nation</p>

@@ -9,7 +9,7 @@ const Navbaar = () => {
         <div className="slide-up-animation">
             <ul className="flex gap-20 text-xl">
                 <li><a className="text-orange-500" href="#home">Home</a></li>
-                <li><a className="text-orange-500" href="">About</a></li>
+                <li><a className="text-orange-500" href="#about">About</a></li>
                 <li><a className="" href="">Idols</a></li>
                 <li><a className="text-green-500" href="">Thanks</a></li>
                 <li><a className="text-green-500" href="">Contact</a></li>
