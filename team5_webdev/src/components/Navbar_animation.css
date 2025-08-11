@@ -1,0 +1,20 @@
+@keyframes slide-up {
+  0%{
+    opacity:0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+
+
+.slide-up-animation{
+  animation-name: slide-up;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  
+}
