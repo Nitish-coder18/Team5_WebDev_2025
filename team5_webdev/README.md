@@ -1,12 +1,8 @@
-# React + Vite
+this report outlines a strategy for developing a website that glorifies the history of our free dom fighter, the people who gave it all to deliver us freedom.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+the concept is to show case our heroes and a tribute to our original leaders who are responsible for making us living in a society where the only rule is democracy
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+team member - 3
+Mayank Tiwari
+Neelendra Shukla
+Nitish Dwivedi
