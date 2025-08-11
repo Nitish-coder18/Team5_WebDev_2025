@@ -1,0 +1,121 @@
+@keyframes slide-up {
+  0%{
+    opacity:0;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+
+[data-aos="slide-up-animation"] {
+  opacity:0;
+    transform: translateY(-50px);
+}
+
+[data-aos="slide-up-animation"].aos-animate {
+  animation-name: slide-up;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: forwards;
+  display: inline-block;
+}
+
+@keyframes left-in{
+  0%{
+    opacity:0;
+    transform: translateX(-100px);
+  }
+
+  100%{
+    opacity:1;
+    transform: translateX(0px);
+  }
+}
+
+[data-aos="left-in-animation"]{
+  opacity:0;
+    transform: translateX(-100px);
+}
+[data-aos="left-in-animation"].aos-animate{
+  animation-name: left-in;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes updown {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(50px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-50px);
+  }
+  100% {
+    transform:translateY(0px);
+  }
+}
+
+[data-aos="updown-animation"]{
+  transform: translateY(0px);
+}
+[data-aos="updown-animation"].aos-animate{
+  animation-name: updown;
+  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  display: inline-block;
+}
+
+@keyframes right-in{
+  0%{
+    opacity:0;
+    transform: translateX(100px);
+  }
+  100%{
+    opacity:1;
+    transform: translateX(0px);
+  }
+}
+
+[data-aos="right-in-animation"]{
+  opacity:0;
+    transform: translateX(100px);
+}
+[data-aos="right-in-animation"].aos-animate{
+  animation-name: left-in;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes still {
+  0% {
+    opacity:0;
+  }
+  40%{
+    transition: color blue 0.2s;
+    color:blue;
+  }
+  60% {
+    transition: color white 0.2s;
+    color: white;
+  }
+  100% {
+    opacity:1;
+  }
+}
