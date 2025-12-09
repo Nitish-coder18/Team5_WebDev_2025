@@ -1,7 +1,7 @@
 import Header from './components/header'
 import React from 'react'
 import { BrowserRouter , Route, Routes,Link } from 'react-router-dom'
-import IdolsList from './components/IdolsList'
+import IdolsList from './components/IdolList/IdolsList'
 import Details from './components/Details'
 import About from './components/about'
 

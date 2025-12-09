@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams, useNavigate } from 'react-router-dom';
 
 import Bhagat from '../assets/Bhagat.jpg';
 import Chandrashekhar from '../assets/chandrasekhar.jpg';
@@ -6,19 +7,10 @@ import Subhash from '../assets/subhash.jpg';
 import MahatmaGandhi from '../assets/mahatmagandhi.jpg';
 import Rani from '../assets/rani.jpg';
 import Jawahar from '../assets/jawaharlal lal nehru.jpg';
-import {Link} from "react-router-dom";  
-
-
-
-import { useParams, useNavigate } from 'react-router-dom';
 
 
 const Idolsdescription = {
-  1: {                  
-    name: "Mahatma Gandhi", 
-    image: MahatmaGandhi,
-    year: "1869-1948",
-    description: `Mohandas Karamchand Gandhi, lovingly called Mahatma Gandhi or the "Father of the Nation," was the heart and soul of India’s non-violent freedom movement. Born on October 2, 1869, in Porbandar, Gujarat, Gandhi’s life and principles inspired millions across India and the world to stand for justice through peaceful means.
+  1: { name: "Mahatma Gandhi", image: MahatmaGandhi, year: "1869-1948", description: `Mohandas Karamchand Gandhi, lovingly called Mahatma Gandhi or the "Father of the Nation," was the heart and soul of India’s non-violent freedom movement. Born on October 2, 1869, in Porbandar, Gujarat, Gandhi’s life and principles inspired millions across India and the world to stand for justice through peaceful means.
 
 Gandhi pioneered the concepts of Ahimsa (non-violence) and Satyagraha (truth-force), advocating that love and truth are mightier than weapons. He led monumental movements like the Non-Cooperation Movement, Salt March (Dandi Satyagraha), and Quit India Movement, uniting Indians of all backgrounds to peacefully resist British oppression.
 
@@ -39,12 +31,9 @@ Famous Quotes by Mahatma Gandhi:
 “You may never know what results come from your actions, but if you do nothing, there will be no results.”
 
 Mahatma Gandhi’s timeless legacy continues to inspire movements for peace, justice, and human rights worldwide.
+` },
 
-`}   ,
-2:{ name: "Subhash Chandra Bose",
-    image: Subhash,
-    year: "1897-1945",
-    description: `Subhas Chandra Bose, affectionately known as "Netaji," was a revolutionary leader who played a pivotal role in India’s struggle for independence. Born on January 23, 1897, in Cuttack, Odisha, Bose was a brilliant student and an ardent nationalist who believed that India’s freedom could not be won through passive resistance alone.
+  2: { name: "Subhash Chandra Bose", image: Subhash, year: "1897-1945", description: `Subhas Chandra Bose, affectionately known as "Netaji," was a revolutionary leader who played a pivotal role in India’s struggle for independence. Born on January 23, 1897, in Cuttack, Odisha, Bose was a brilliant student and an ardent nationalist who believed that India’s freedom could not be won through passive resistance alone.
 
 Rejecting the dominant Gandhian philosophy of non-violence, Bose advocated for a more direct and forceful approach to end British rule. His unwavering patriotism and dynamic leadership galvanized millions of Indians to join the cause. Bose’s most notable achievement was the formation of the Indian National Army (INA), which he revitalized with the help of Indian prisoners of war and expatriates in Southeast Asia. The INA fought valiantly alongside the Japanese forces against the British in World War II, symbolizing India’s uncompromising demand for freedom.
 
@@ -58,14 +47,9 @@ Some of his famous quotes that continue to inspire generations are:
 
 "It is blood alone that can pay the price of freedom. Give me blood and I will give you freedom!"
 
-Though Subhas Chandra Bose’s mysterious disappearance in 1945 left many questions unanswered, his legacy as a fearless patriot and visionary leader endures, reminding us of the power of courage, determination, and sacrifice in the pursuit of justice.
-`  },
+Though Subhas Chandra Bose’s mysterious disappearance in 1945 left many questions unanswered, his legacy as a fearless patriot and visionary leader endures, reminding us of the power of courage, determination, and sacrifice in the pursuit of justice.` },
 
-
-3:{  id:3, name:"Rani Lakshmibai", 
-    image: Rani, 
-    year:"1828-1858",
-    description: `Rani Lakshmibai of Jhansi, born as Manikarnika Tambe on November 19, 1828, was one of the most courageous and iconic figures of India’s fight against British colonial rule. Revered as the “Queen of Jhansi,” she epitomized bravery, resilience, and unwavering patriotism during the Indian Rebellion of 1857, also known as the First War of Indian Independence.
+  3: { name: "Rani Lakshmibai", image: Rani, year: "1828-1858", description: `Rani Lakshmibai of Jhansi, born as Manikarnika Tambe on November 19, 1828, was one of the most courageous and iconic figures of India’s fight against British colonial rule. Revered as the “Queen of Jhansi,” she epitomized bravery, resilience, and unwavering patriotism during the Indian Rebellion of 1857, also known as the First War of Indian Independence.
 
 After marrying Maharaja Gangadhar Rao Newalkar, the ruler of Jhansi, Manikarnika was named Lakshmibai. Following her husband’s death and the British East India Company’s attempt to annex Jhansi under the Doctrine of Lapse, Rani Lakshmibai took charge as the regent of Jhansi for her adopted son and vowed to protect her kingdom from British domination.
 
@@ -81,14 +65,9 @@ Famous Quotes by Rani Lakshmibai:
 
 “Better to die fighting for freedom than be a prisoner all the days of your life.”
 
-“I shall never surrender or live to be a slave.”
-`
-},
+“I shall never surrender or live to be a slave.” ` },
 
-4:{ id:4, name:"Jawaharlal Nehru",
-    image: Jawahar, 
-    year:"1889-1964",
-    description: `Jawaharlal Nehru (1889–1964) was a towering figure in India’s freedom struggle and the country’s first Prime Minister after independence. Born on November 14, 1889, in Allahabad into a wealthy and politically influential family, Nehru was educated in England, where he studied at Harrow and Cambridge, and later trained as a barrister at the Inner Temple, London.
+  4: { name: "Jawaharlal Nehru", image: Jawahar, year: "1889-1964", description: `Jawaharlal Nehru (1889–1964) was a towering figure in India’s freedom struggle and the country’s first Prime Minister after independence. Born on November 14, 1889, in Allahabad into a wealthy and politically influential family, Nehru was educated in England, where he studied at Harrow and Cambridge, and later trained as a barrister at the Inner Temple, London.
 
 Deeply influenced by Mahatma Gandhi and the Indian National Congress, Nehru dedicated his life to the cause of India’s independence from British rule. Known for his eloquence, vision, and progressive ideas, he became a prominent leader who championed secularism, democracy, and social justice.
 
@@ -98,14 +77,9 @@ As India’s first Prime Minister from 1947 to 1964, Nehru laid the foundation f
 
 Nehru was also a prolific writer and thinker. His works, such as “Discovery of India” and “Glimpses of World History,” reflect his deep understanding of India’s cultural heritage and global history.
 
-Despite facing challenges like partition, communal violence, and economic hardships, Nehru’s leadership helped steer India toward unity, stability, and progress. His legacy as a visionary leader and architect of modern India continues to inspire generations.
-`},
+Despite facing challenges like partition, communal violence, and economic hardships, Nehru’s leadership helped steer India toward unity, stability, and progress. His legacy as a visionary leader and architect of modern India continues to inspire generations.` },
 
-
-5:{ id:5, name:"Bhagat Singh",
-    image: Bhagat, 
-    year:"1907-1931",
-    description: `Bhagat Singh was one of the most influential revolutionaries in India’s struggle for independence, known for his fearless patriotism and unwavering commitment to the cause of freedom. Born on September 28, 1907, in Banga, Punjab, Bhagat Singh grew up in a family deeply involved in the freedom movement, which shaped his early resolve to fight against British colonial rule.
+  5: { name: "Bhagat Singh", image: Bhagat, year: "1907-1931", description: `Bhagat Singh was one of the most influential revolutionaries in India’s struggle for independence, known for his fearless patriotism and unwavering commitment to the cause of freedom. Born on September 28, 1907, in Banga, Punjab, Bhagat Singh grew up in a family deeply involved in the freedom movement, which shaped his early resolve to fight against British colonial rule.
 
 A brilliant student and thinker, Singh rejected the moderate approaches of some freedom fighters and instead embraced revolutionary socialism and armed resistance as necessary means to overthrow the British Empire. He became a symbol of youthful courage and sacrifice, inspiring generations with his bold actions and fearless spirit.
 
@@ -115,59 +89,80 @@ Arrested and tried for his revolutionary activities, Bhagat Singh used the court
 
 On March 23, 1931, at the young age of 23, Bhagat Singh was executed by the British government. His martyrdom sparked nationwide protests and cemented his legacy as a fearless fighter who gave his life for India’s freedom.
 
-Bhagat Singh’s courage, intellect, and unwavering dedication continue to inspire millions, symbolizing the relentless spirit of youth striving for justice and independence.`},
+Bhagat Singh’s courage, intellect, and unwavering dedication continue to inspire millions, symbolizing the relentless spirit of youth striving for justice and independence.` },
 
-6:{ id:6, name:"Chandra Shekhar Azad",
-    image: Chandrashekhar, 
-    year:"1906-1931",
-    description: `Chandrashekhar Azad was a great Indian freedom fighter. His fierce patriotism and courage inspired others of his generation to enter freedom struggle. He was the mentor of Bhagat Singh, another great freedom fighter, and along with Bhagat Singh he is considered as one of the greatest revolutionaries that India has produced.
+  6: { name: "Chandra Shekhar Azad", image: Chandrashekhar, year: "1906-1931", description: `Chandrashekhar Azad was a great Indian freedom fighter. His fierce patriotism and courage inspired others of his generation to enter freedom struggle. He was the mentor of Bhagat Singh, another great freedom fighter, and along with Bhagat Singh he is considered as one of the greatest revolutionaries that India has produced.
 
-Chandrashekhar Azad was a Bharatiya revolutionary from Allahabad, Uttar Pradesh. He believed that his Dharma was to fight for the Nation. He said a soldier never relinquishes his weapon. He was involved in the Kakori Train Robbery (1926), in the attempt to blow up the Viceroy’s train (1926), and in the shooting of Saunders at Lahore (1928) to avenge the killing of Lala Lajpat Rai. He formed the ‘Hindustan Socialist Republican Association’.  He was an ideal for revolutionaries such as Bhagat Singh, Sukhdev, Batukeshwar Dutt and Rajguru.`},
-
-
-
-
+Chandrashekhar Azad was a Bharatiya revolutionary from Allahabad, Uttar Pradesh. He believed that his Dharma was to fight for the Nation. He said a soldier never relinquishes his weapon. He was involved in the Kakori Train Robbery (1926), in the attempt to blow up the Viceroy’s train (1926), and in the shooting of Saunders at Lahore (1928) to avenge the killing of Lala Lajpat Rai. He formed the ‘Hindustan Socialist Republican Association’.  He was an ideal for revolutionaries such as Bhagat Singh, Sukhdev, Batukeshwar Dutt and Rajguru.`}
 };
-
 
 
 const Details = () => {
 
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const idol = Idolsdescription[id];
-    if (!idol) {
-        return <div>Idol not found</div>;
-    }   
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const idol = Idolsdescription[id];
+
+  if (!idol) return <div className="text-white">Idol not found</div>;
+
   return (
+    <div className="bg-[#0b0b0b] min-h-screen py-16 px-4 text-gray-200">
 
-    <div>
-        <center>
-        <h1 className='text-3xl my-5'>{idol.name}</h1>   
-        </center> 
+      {/* MAIN CONTAINER */}
+      <div className="max-w-4xl mx-auto bg-[#141414] p-10 rounded-2xl border border-gray-700 shadow-xl">
 
-<center>
-        <img className='img5 h-55' src={idol.image} alt={idol.name} />
-</center>
+        {/* Heading */}
+        <h1 className="text-4xl font-extrabold text-center mb-6">
+          <span className="text-orange-400">{idol.name}</span>
+        </h1>
 
-<center>
-        <p className='mb-10'>Year: {idol.year}</p>
-</center>
+        {/* Image Box */}
+        <div className="w-full flex justify-center mb-6">
+          <div className="rounded-xl overflow-hidden border-4 border-gray-700 shadow-lg">
+            
+            {/* Tricolor Border Top */}
+            <div className="h-2 w-full flex">
+              <div className="w-1/3 bg-orange-500"></div>
+              <div className="w-1/3 bg-white"></div>
+              <div className="w-1/3 bg-green-600"></div>
+            </div>
 
-<center>
-        <p className='w-250'>{idol.description}</p>
-    </center>
+            <img 
+              src={idol.image} 
+              alt={idol.name} 
+              className="w-[420px] h-[420px] object-cover"
+            />
+          </div>
+        </div>
 
-<center >
-        <button className='text-3xl font-bold  my-10 mb-10 btn' onClick={() => navigate(-1)}>Go Back</button>
-</center>
-        
+        {/* Years */}
+        <p className="text-center text-lg text-green-300 mb-5">
+          Year: {idol.year}
+        </p>
 
+        {/* Description */}
+        <p className="leading-8 text-gray-300 text-lg tracking-wide whitespace-pre-line text-justify">
+          {idol.description}
+        </p>
 
+        {/* Button */}
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => navigate(-1)}
+            className="
+              px-10 py-3 text-xl font-bold rounded-xl
+              bg-gradient-to-r from-orange-500 via-white to-green-500 
+              text-black shadow-lg hover:scale-105 active:scale-95 
+              transition-all duration-300
+            "
+          >
+            Go Back
+          </button>
+        </div>
 
-
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;
